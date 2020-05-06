@@ -965,7 +965,7 @@
 #if HAS_LCD_MENU
 
   // Include a page of printer information in the LCD Main Menu
-  //#define LCD_INFO_MENU
+  #define LCD_INFO_MENU
   #if ENABLED(LCD_INFO_MENU)
     //#define LCD_PRINTER_INFO_IS_BOOTSCREEN // Show bootscreen(s) instead of Printer Info pages
   #endif
@@ -2070,7 +2070,7 @@
   #endif
 
   #if AXIS_IS_TMC(Y2)
-    #define Y2_CURRENT      800
+    #define Y2_CURRENT      600
     #define Y2_CURRENT_HOME Y2_CURRENT
     #define Y2_MICROSTEPS    16
     #define Y2_RSENSE         0.11
@@ -2086,7 +2086,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z2)
-    #define Z2_CURRENT      800
+    #define Z2_CURRENT      600
     #define Z2_CURRENT_HOME Z2_CURRENT
     #define Z2_MICROSTEPS    16
     #define Z2_RSENSE         0.11
@@ -2094,7 +2094,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z3)
-    #define Z3_CURRENT      800
+    #define Z3_CURRENT      600
     #define Z3_CURRENT_HOME Z3_CURRENT
     #define Z3_MICROSTEPS    16
     #define Z3_RSENSE         0.11
@@ -2102,7 +2102,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z4)
-    #define Z4_CURRENT      800
+    #define Z4_CURRENT      600
     #define Z4_CURRENT_HOME Z4_CURRENT
     #define Z4_MICROSTEPS    16
     #define Z4_RSENSE         0.11
@@ -2117,49 +2117,49 @@
   #endif
 
   #if AXIS_IS_TMC(E1)
-    #define E1_CURRENT      800
+    #define E1_CURRENT      600
     #define E1_MICROSTEPS    16
     #define E1_RSENSE         0.11
     #define E1_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E2)
-    #define E2_CURRENT      800
+    #define E2_CURRENT      600
     #define E2_MICROSTEPS    16
     #define E2_RSENSE         0.11
     #define E2_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E3)
-    #define E3_CURRENT      800
+    #define E3_CURRENT      600
     #define E3_MICROSTEPS    16
     #define E3_RSENSE         0.11
     #define E3_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E4)
-    #define E4_CURRENT      800
+    #define E4_CURRENT      600
     #define E4_MICROSTEPS    16
     #define E4_RSENSE         0.11
     #define E4_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E5)
-    #define E5_CURRENT      800
+    #define E5_CURRENT      600
     #define E5_MICROSTEPS    16
     #define E5_RSENSE         0.11
     #define E5_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E6)
-    #define E6_CURRENT      800
+    #define E6_CURRENT      600
     #define E6_MICROSTEPS    16
     #define E6_RSENSE         0.11
     #define E6_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E7)
-    #define E7_CURRENT      800
+    #define E7_CURRENT      600
     #define E7_MICROSTEPS    16
     #define E7_RSENSE         0.11
     #define E7_CHAIN_POS     -1
@@ -2293,14 +2293,14 @@
   #define Z2_HYBRID_THRESHOLD      3
   #define Z3_HYBRID_THRESHOLD      3
   #define Z4_HYBRID_THRESHOLD      3
-  #define E0_HYBRID_THRESHOLD     30
-  #define E1_HYBRID_THRESHOLD     30
-  #define E2_HYBRID_THRESHOLD     30
-  #define E3_HYBRID_THRESHOLD     30
-  #define E4_HYBRID_THRESHOLD     30
-  #define E5_HYBRID_THRESHOLD     30
-  #define E6_HYBRID_THRESHOLD     30
-  #define E7_HYBRID_THRESHOLD     30
+  #define E0_HYBRID_THRESHOLD     15
+  #define E1_HYBRID_THRESHOLD     15
+  #define E2_HYBRID_THRESHOLD     15
+  #define E3_HYBRID_THRESHOLD     15
+  #define E4_HYBRID_THRESHOLD     15
+  #define E5_HYBRID_THRESHOLD     15
+  #define E6_HYBRID_THRESHOLD     15
+  #define E7_HYBRID_THRESHOLD     15
 
   /**
    * Use StallGuard2 to home / probe X, Y, Z.

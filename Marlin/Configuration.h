@@ -72,7 +72,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "Alexandru Grigoras" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Alexandru Grigoras and Serban Chisca" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -133,7 +133,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "CoreXY"
+#define CUSTOM_MACHINE_NAME "Liquid"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -484,7 +484,7 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // CoreXY
+  // Liquid
   #define DEFAULT_Kp 15.53
   #define DEFAULT_Ki 0.69
   #define DEFAULT_Kd 86.83
@@ -542,7 +542,7 @@
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
 
-  // CoreXY
+  // Liquid
   #define DEFAULT_bedKp 119.95
   #define DEFAULT_bedKi 14.35
   #define DEFAULT_bedKd 668.18
@@ -749,7 +749,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 100, 100, 12, 120 }
+#define DEFAULT_MAX_FEEDRATE          { 180, 180, 12, 120 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -762,7 +762,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 960, 960, 200, 5000 } 
+#define DEFAULT_MAX_ACCELERATION      { 1250, 1250, 200, 5000 } 
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -777,9 +777,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          960    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  960    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   960    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          800    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  5000   // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   1250   // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -1104,12 +1104,12 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 198
-#define Y_BED_SIZE 215
+#define X_BED_SIZE 200
+#define Y_BED_SIZE 200
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define Y_MIN_POS -5
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
